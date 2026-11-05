@@ -5,122 +5,63 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#1749a5">
 <link rel="manifest" href="./manifest.webmanifest">
-<link rel="icon" href="./icon.svg" type="image/svg+xml">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="SVC FontConvert">
-<title>SHREE VAISHNAVI COMPUTERS | FontConvert</title>
+<title>SHREE VAISHNAVI COMPUTERS | FontConvert V2</title>
 <style>
-:root{--blue:#1749a5;--orange:#e85d0c;--ink:#263238;--muted:#77818a;--line:#d9dfe3;--bg:#f5f6f7;--white:#fff}
-*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Arial,"Nirmala UI",sans-serif;color:var(--ink);background:var(--bg)}
-header{height:76px;background:#fff;border-bottom:1px solid #e5e8eb;display:flex;align-items:center;justify-content:space-between;padding:0 24px;gap:16px}
-.brand{font-size:clamp(18px,2.2vw,25px);font-weight:800;letter-spacing:.2px;color:#24364b}.version{font-size:14px;color:#687482;font-weight:700}.version small{margin-left:6px;background:#f1f3f5;padding:4px 7px;border-radius:5px;color:#536273}
-main{max-width:1600px;margin:0 auto;padding:20px 18px 28px}
-.panels{display:grid;grid-template-columns:minmax(0,1fr) 116px minmax(0,1fr);gap:16px;align-items:stretch}
-.panel{background:#fff;border:1px solid #dfe4e7;border-radius:13px;min-width:0;overflow:hidden;box-shadow:0 2px 8px rgba(22,40,55,.045)}
-.panel-head{padding:14px 14px 10px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
-.heading{display:flex;align-items:center;gap:10px}.heading h2{font-size:17px;margin:0;font-weight:750}.label{font-size:10px;color:#a77c2c;background:#fff5dd;padding:4px 7px;border-radius:4px;font-weight:800;letter-spacing:.3px}.label.uni{color:#315b8e;background:#eaf2ff}
-.tools{display:flex;align-items:center;gap:7px;flex-wrap:wrap}.voice{border:0;background:transparent;color:#48617c;padding:7px 9px;border-radius:7px;cursor:pointer;font-size:13px}.voice:hover{background:#eef3f8}.voice.active{background:#ffeded;color:#bd2525}
-.mode{display:flex;align-items:center;gap:0;background:#f2f4f6;border-radius:8px;padding:3px}.mode button{border:0;background:transparent;color:#5f6871;padding:7px 10px;border-radius:6px;font-size:12px;cursor:pointer;white-space:nowrap}.mode button.selected{background:var(--orange);color:#fff;font-weight:700}.panel.right .mode button.selected{background:var(--blue)}.fkey{font-size:11px;color:#6e7780;border:1px solid #dce1e5;border-radius:5px;padding:4px 6px;background:#fafafa}
-.actions{display:flex;gap:7px}.action{border:1px solid #e3e7ea;background:#fafbfc;border-radius:7px;padding:7px 10px;color:#56616b;font-size:12px;cursor:pointer}.action:hover{background:#edf2f6}
-textarea{display:block;width:calc(100% - 26px);height:350px;margin:8px 13px 0;padding:13px 14px;resize:vertical;border:1px solid #dce1e5;border-radius:9px;background:#fff;color:#222;font-size:19px;line-height:1.75;outline:none}textarea:focus{border-color:#91a9d1;box-shadow:0 0 0 2px #1749a51a}
-#devlys{font-family:"DevLys 010","DevLys010","Kruti Dev 010","Kruti Dev",serif}#unicode{font-family:"Mangal","Nirmala UI","Arial Unicode MS",sans-serif}
-.stats{display:flex;justify-content:space-between;gap:6px;flex-wrap:wrap;padding:10px 13px 12px;color:#6f7880;font-size:11px}.stats b{font-weight:700;color:#48545e}
-.middle{display:flex;flex-direction:column;justify-content:center;gap:10px}.convert{min-height:62px;border:0;border-radius:10px;background:linear-gradient(135deg,#244eaa,#342e88);color:#fff;font-weight:750;font-size:13px;cursor:pointer;box-shadow:0 3px 7px #172d6030}.convert span{display:block;font-size:20px;line-height:1.2;margin-bottom:3px}.convert:hover{filter:brightness(1.08);transform:translateY(-1px)}.reset{height:39px;border:1px solid #d9dfe4;background:#fff;border-radius:9px;color:#505c65;cursor:pointer;font-size:12px}.reset:hover{background:#f0f3f5}
-.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#202c38;color:#fff;padding:10px 16px;border-radius:9px;font-size:13px;transition:.2s;z-index:5}.toast.show{opacity:1;transform:translate(-50%,0)}
-@media(max-width:950px){.panels{grid-template-columns:minmax(0,1fr) 90px minmax(0,1fr);gap:9px}textarea{height:320px}.panel-head{padding:12px 10px 8px}.heading h2{font-size:15px}.mode button{padding:6px 7px}}
-@media(max-width:720px){header{height:64px;padding:0 14px}.panels{grid-template-columns:1fr;gap:12px}.middle{flex-direction:row;flex-wrap:wrap;justify-content:center}.convert{flex:1;min-width:130px;min-height:55px}.reset{width:100%}textarea{height:250px}.panel-head{padding:12px}.stats{font-size:10px}}
-@media(max-width:410px){.tools{width:100%;justify-content:space-between}.panel-head{gap:7px}.mode button{padding:7px 8px}.actions{margin-left:auto}}
+*{box-sizing:border-box}body{margin:0;background:#f4f6f8;color:#263238;font-family:Arial,"Nirmala UI",sans-serif}
+header{background:#fff;padding:20px;text-align:center;border-bottom:1px solid #ddd}
+h1{font-size:clamp(18px,3vw,25px);margin:0;color:#24364b}header p{margin:6px 0 0;color:#64748b;font-size:13px}
+main{max-width:1200px;margin:22px auto;padding:0 14px}.panels{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.panel{background:white;border:1px solid #dce2e8;border-radius:12px;padding:14px;min-width:0}
+h2{font-size:17px;margin:0 0 10px}textarea{width:100%;height:300px;resize:vertical;border:1px solid #cbd5e1;border-radius:8px;padding:12px;font-size:18px;line-height:1.65}
+#legacy{font-family:"DevLys 010","DevLys010","Kruti Dev 010",serif}#unicode{font-family:"Mangal","Nirmala UI",sans-serif}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.actions button{border:0;border-radius:7px;padding:10px 14px;background:#1749a5;color:white;font-weight:700;cursor:pointer}
+.actions .light{background:#e9eef5;color:#263238}.note{font-size:13px;line-height:1.55;color:#64748b;margin-top:14px}
+@media(max-width:700px){.panels{grid-template-columns:1fr}textarea{height:230px}}
 </style>
 </head>
 <body>
-<header><div class="brand">SHREE VAISHNAVI COMPUTERS</div><div class="version">FontConvert <small>V3</small></div></header>
+<header><h1>SHREE VAISHNAVI COMPUTERS</h1><p>FontConvert V2 · DevLys 010 ↔ Unicode / Mangal</p></header>
 <main>
 <div class="panels">
-<section class="panel left">
- <div class="panel-head">
-  <div class="heading"><h2>DevLys 010</h2><span class="label">LEGACY FONT</span></div>
-  <div class="tools">
-   <button class="voice" id="voiceD" type="button">♩ Voice</button>
-   <div class="mode"><button class="selected" id="devHindi" type="button">Type Hindi</button><button id="devEnglish" type="button">Type English</button></div><span class="fkey">F12</span>
-   <div class="actions"><button class="action" id="copyD">▢ Copy</button><button class="action" id="clearD">▣ Clear</button></div>
-  </div>
- </div>
- <textarea id="devlys" spellcheck="false" aria-label="DevLys 010 input"></textarea>
- <div class="stats"><span>Characters: <b id="dChars">0</b></span><span>Words: <b id="dWords">0</b></span><span>Paragraphs: <b id="dParas">0</b></span><span>Sentences: <b id="dSent">0</b></span></div>
-</section>
-<div class="middle">
- <button class="convert" id="toUnicode"><span>➜</span>To Unicode</button>
- <button class="convert" id="toDevlys"><span>←</span>To DevLys</button>
- <button class="reset" id="reset">× Reset</button>
+<section class="panel"><h2>DevLys 010</h2><textarea id="legacy" spellcheck="false" placeholder="यहाँ DevLys 010 टेक्स्ट पेस्ट करें"></textarea>
+<div class="actions"><button id="toUnicode">To Unicode →</button><button class="light" id="copyLegacy">Copy</button><button class="light" id="clearLegacy">Clear</button></div></section>
+<section class="panel"><h2>Unicode / Mangal</h2><textarea id="unicode" spellcheck="false" placeholder="यहाँ Unicode Hindi टेक्स्ट पेस्ट करें"></textarea>
+<div class="actions"><button id="toLegacy">← To DevLys</button><button class="light" id="copyUnicode">Copy</button><button class="light" id="clearUnicode">Clear</button></div></section>
 </div>
-<section class="panel right">
- <div class="panel-head">
-  <div class="heading"><h2>Unicode / Mangal</h2><span class="label uni">STANDARD HINDI</span></div>
-  <div class="tools">
-   <button class="voice" id="voiceU" type="button">♩ Voice</button>
-   <div class="mode"><button class="selected" id="uniHindi" type="button">Type Hindi</button><button id="uniEnglish" type="button">Type English</button></div><span class="fkey">F12</span>
-   <div class="actions"><button class="action" id="copyU">▢ Copy</button><button class="action" id="clearU">▣ Clear</button></div>
-  </div>
- </div>
- <textarea id="unicode" spellcheck="false" aria-label="Unicode Mangal output"></textarea>
- <div class="stats"><span>Characters: <b id="uChars">0</b></span><span>Words: <b id="uWords">0</b></span><span>Paragraphs: <b id="uParas">0</b></span><span>Sentences: <b id="uSent">0</b></span></div>
-</section>
-</div>
+<div class="actions"><button class="light" id="reset">Reset Both</button></div>
+<p class="note"><strong>V2 परीक्षण build:</strong> इस पैकेज में अभी पूरा प्रमाणित DevLys 010 glyph-map शामिल नहीं है। इसे लाइव उपयोग में लगाने से पहले वास्तविक DevLys font और सत्यापित mapping से परीक्षण आवश्यक है। नीचे दिया converter सीमित sample mapping पर आधारित है, इसलिए इसे आधिकारिक दस्तावेज़ों के लिए उपयोग न करें।</p>
 </main>
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script>
-const $=id=>document.getElementById(id),D=$('devlys'),U=$('unicode');
-const from=[
-['ñ','॰'],['Q+Z','QZ+'],['sas','sa'],['aa','a'],[')Z','र्द्ध'],['ZZ','Z'],['å','०'],['ƒ','१'],['„','२'],['…','३'],['†','४'],['‡','५'],['ˆ','६'],['‰','७'],['Š','८'],['‹','९'],
-['¶+','फ़्'],['d+','क़'],['[+k','ख़'],['[+','ख़्'],['x+','ग़'],['T+','ज़्'],['t+','ज़'],['M+','ड़'],['<+','ढ़'],['Q+','फ़'],[';+','य़'],['j+','ऱ'],['u+','ऩ'],
-['Ùk','त्त'],['Ù','त्त्'],['ä','क्त'],['–','दृ'],['—','कृ'],['é','न्न'],['™','न्न्'],['=kk','त्रा'],['f=k','त्रि'],['à','ह्न'],['á','ह्य'],['â','हृ'],['ã','ह्म'],['ºz','ह्र'],['º','ह्'],['í','द्द'],['{k','क्ष'],['{','क्ष्'],['=','त्र'],['«','त्र्'],
-['Nî','छ्य'],['Vî','ट्य'],['Bî','ठ्य'],['Mî','ड्य'],['<î','ढ्य'],['|','द्य'],['K','ज्ञ'],['}','द्व'],['J','श्र'],['Vª','ट्र'],['Mª','ड्र'],['<ªª','ढ्र'],['Nª','छ्र'],['Ø','क्र'],['Ý','फ्र'],['nzZ','र्द्र'],['æ','द्र'],['ç','प्र'],['Á','प्र'],['xz','ग्र'],['#','रु'],[':','रू'],
-['v‚','ऑ'],['vks','ओ'],['vkS','औ'],['vk','आ'],['v','अ'],['b±','ईं'],['Ã','ई'],['bZ','ई'],['b','इ'],['m','उ'],['Å','ऊ'],[',s','ऐ'],[',','ए'],['_','ऋ'],
-['ô','क्क'],['Dk','क'],['d','क'],['D','क्'],['[k','ख'],['[','ख्'],['Xk','ग'],['x','ग'],['X','ग्'],['Ä','घ'],['?k','घ'],['?','घ्'],['³','ङ'],['pkS','चै'],['Pk','च'],['p','च'],['P','च्'],['N','छ'],['Tk','ज'],['t','ज'],['T','ज्'],['>','झ'],['÷','झ्'],['¥','ञ'],
-['ê','ट्ट'],['ë','ट्ठ'],['V','ट'],['B','ठ'],['ì','ड्ड'],['ï','ड्ढ'],['M','ड'],['<','ढ'],['.k','ण'],['.','ण्'],['Rk','त'],['r','त'],['R','त्'],['Fk','थ'],['F','थ्'],[')','द्ध'],['n','द'],['/k','ध'],['/','ध्'],['u','न'],['Uk','न'],['U','न्'],
-['Ik','प'],['i','प'],['I','प्'],['Q','फ'],['¶','फ्'],['Ck','ब'],['c','ब'],['C','ब्'],['Hk','भ'],['H','भ्'],['Ek','म'],['e','म'],['E','म्'],['¸','य्'],[';','य'],['j','र'],['Yk','ल'],['y','ल'],['Y','ल्'],['G','ळ'],['Ok','व'],['o','व'],['O','व्'],["'k",'श'],["'",'श्'],['"k','ष'],['"','ष्'],['Lk','स'],['l','स'],['L','स्'],['g','ह'],
-['È','ीं'],['z','्र'],['Ì','द्द'],['Í','ट्ट'],['Î','ट्ठ'],['Ï','ड्ड'],['Ñ','कृ'],['Ò','भ'],['Ó','्य'],['Ô','ड्ढ'],['Ö','झ्'],['Ük','त्त'],['Ü','त्त्'],['‚','ॉ'],['ks','ो'],['kS','ौ'],['k','ा'],['h','ी'],['q','ु'],['w','ू'],['`','ृ'],['s','े'],['S','ै'],['a','ं'],['¡','ँ'],['%','ः'],['W','ॅ'],['~j','्र'],['~','्'],['\\','़'],['+','़'],['A','।']];
-// Extended Alt-code glyphs not already covered by the base DevLys/KrutiDev table.
-from.push(['¼','('],['½',')'],['¿','{'],['À','}'],['Þ','“'],['ß','”']);
-function legacyToUnicode(input){let s=input;
-for(const [a,b] of [...from].sort((x,y)=>y[0].length-x[0].length))s=s.split(a).join(b);s=s.replace(/±/g,'Zं').replace(/Æ/g,'र्f').replace(/Ç/g,'fa').replace(/É/g,'र्fa').replace(/Ê/g,'ीZ');
-// Reposition pre-base i-matra and repair reph Z markers.
-s=s.replace(/f([क-हक़-य़])/g,'$1ि').replace(/fa([क-हक़-य़])/g,'$1िं');s=s.replace(/ि्([क-हक़-य़])/g,'्$1ि');
-let marks='अआइईउऊएऐओऔािीुूृेंःँॅ';s=s.replace(/Z/g,(m,off,str)=>{let i=off-1;while(i>=0&&marks.includes(str[i]))i--;if(i<0)return 'र्';return str.slice(0,i)+'र्'+str.slice(i,off)+str.slice(off+1)});return s;}
-const to=[['फ़्','¶'],['क़','d'],['ख़','[k'],['ग़','x'],['ज़्','T'],['ज़','t'],['ड़','M+'],['ढ़','<+'],['फ़','Q'],['य़',';'],['ऱ','j'],['ऩ','u'],['त्त्','Ù'],['त्त','Ùk'],['क्त','ä'],['दृ','–'],['कृ','—'],['ह्न','à'],['ह्य','á'],['हृ','â'],['ह्म','ã'],['ह्र','ºz'],['ह्','º'],['द्द','í'],['क्ष्','{'],['क्ष','{k'],['त्र्','«'],['त्र',' ='],['ज्ञ','K'],['छ्य','Nî'],['ट्य','Vî'],['ठ्य','Bî'],['ड्य','Mî'],['ढ्य','<î'],['द्य','|'],['द्व','}'],['श्र','J'],['ट्र','Vª'],['ड्र','Mª'],['ढ्र','<ªª'],['छ्र','Nª'],['क्र','Ø'],['फ्र','Ý'],['द्र','æ'],['प्र','ç'],['ग्र','xz'],['रु','#'],['रू',':'],['ऑ','v‚'],['ओ','vks'],['औ','vkS'],['आ','vk'],['अ','v'],['ईं','b±'],['ई','bZ'],['इ','b'],['उ','m'],['ऊ','Å'],['ऐ',',s'],['ए',','],['ऋ','_'],['क्क','ô'],['क्','D'],['क','d'],['ख्','['],['ख','[k'],['ग्','X'],['ग','x'],['घ्','?'],['घ','?k'],['ङ','³'],['चै','pkS'],['च्','P'],['च','p'],['छ','N'],['ज्','T'],['ज','t'],['झ्','÷'],['झ','>'],['ञ','¥'],['ट्ट','ê'],['ट्ठ','ë'],['ट','V'],['ठ','B'],['ड्ड','ì'],['ड्ढ','ï'],['ड','M'],['ढ','<'],['ण्','.'],['ण','.k'],['त्','R'],['त','r'],['थ्','F'],['थ','Fk'],['द्ध',')'],['द','n'],['ध्','/'],['ध','/k'],['न्','U'],['न','u'],['प्','I'],['प','i'],['फ्','¶'],['फ','Q'],['ब्','C'],['ब','c'],['भ्','H'],['भ','Hk'],['म्','E'],['म','e'],['य्','¸'],['य',';'],['र','j'],['ल्','Y'],['ल','y'],['ळ','G'],['व्','O'],['व','o'],['श्',"'"],['श',"'k"],['ष्','"'],['ष','"k'],['स्','L'],['स','l'],['ह','g'],['ॉ','‚'],['ो','ks'],['ौ','kS'],['ा','k'],['ी','h'],['ु','q'],['ू','w'],['ृ','`'],['े','s'],['ै','S'],['ं','a'],['ँ','¡'],['ः','%'],['ॅ','W'],['्','~'],['।','A']];
-function unicodeToLegacy(input){let s=input.normalize('NFC');
-const unicodeAltGlyphs=[['“','Þ'],['”','ß'],['(','¼'],[')', '½'],['{','¿'],['}','À']];
-for(const [a,b] of unicodeAltGlyphs)s=s.split(a).join(b);
-s=s.replace(/क़/g,'क़').replace(/ख़/g,'ख़').replace(/ग़/g,'ग़').replace(/ज़/g,'ज़').replace(/ड़/g,'ड़').replace(/ढ़/g,'ढ़').replace(/फ़/g,'फ़');
-// Move short-i before its consonant cluster, and reph to the end of its syllable.
-s=s.replace(/([क-हक़-य़]+)ि/g,'f$1');s=s.replace(/र्([क-ह-क़-य़]+)([ािीुूृेैोौंःँॅ]*)/g,'$1$2Z');for(const [a,b] of [...to].sort((x,y)=>y[0].length-x[0].length))s=s.split(a).join(b);return s;}
-
-function toast(msg){const t=$('toast');t.textContent=msg;t.classList.add('show');clearTimeout(window.__toastTimer);window.__toastTimer=setTimeout(()=>t.classList.remove('show'),1300)}
-function stats(el,prefix){const s=el.value.trim(),words=s?s.split(/\s+/u).length:0,paras=s?s.split(/\n\s*\n/u).length:0,sents=s?(s.match(/[.!?।]+/gu)||[]).length:0;$(prefix+'Chars').textContent=el.value.length.toLocaleString('en-IN');$(prefix+'Words').textContent=words.toLocaleString('en-IN');$(prefix+'Paras').textContent=paras.toLocaleString('en-IN');$(prefix+'Sent').textContent=sents.toLocaleString('en-IN')}
-function update(){stats(D,'d');stats(U,'u');try{localStorage.setItem('svfcv3_draft',JSON.stringify({d:D.value,u:U.value}))}catch(e){}}
-D.addEventListener('input',update);U.addEventListener('input',update);
-function convertU(){U.value=legacyToUnicode(D.value);update();U.focus()}
-function convertD(){D.value=unicodeToLegacy(U.value);update();D.focus()}
-$('toUnicode').onclick=convertU;$('toDevlys').onclick=convertD;
-$('reset').onclick=()=>{D.value='';U.value='';update();D.focus()};
-$('clearD').onclick=()=>{D.value='';update();D.focus()};$('clearU').onclick=()=>{U.value='';update();U.focus()};
-async function copy(el){if(!el.value)return toast('Nothing to copy');try{await navigator.clipboard.writeText(el.value)}catch(e){el.focus();el.select();document.execCommand('copy')}toast('Copied')}
-$('copyD').onclick=()=>copy(D);$('copyU').onclick=()=>copy(U);
-function setMode(left,hindi){const el=left?D:U;el.style.fontFamily=hindi?(left?'"DevLys 010","DevLys010","Kruti Dev 010",serif':'"Mangal","Nirmala UI",sans-serif'):'Arial,sans-serif';$(''+(left?'devHindi':'uniHindi')).classList.toggle('selected',hindi);$(''+(left?'devEnglish':'uniEnglish')).classList.toggle('selected',!hindi);el.focus()}
-$('devHindi').onclick=()=>setMode(true,true);$('devEnglish').onclick=()=>setMode(true,false);$('uniHindi').onclick=()=>setMode(false,true);$('uniEnglish').onclick=()=>setMode(false,false);
-// F12 toggles the language mode for the focused editor.
-document.addEventListener('keydown',e=>{if(e.key==='F12'){e.preventDefault();if(document.activeElement===D){const h=$('devHindi').classList.contains('selected');setMode(true,!h)}else if(document.activeElement===U){const h=$('uniHindi').classList.contains('selected');setMode(false,!h)}}});
-// Voice dictation: speech recognition is browser/device dependent; text is inserted into the active side.
-const SR=window.SpeechRecognition||window.webkitSpeechRecognition;let activeRec=null,activeBtn=null;
-function voice(side){if(!SR){toast('Voice input is not supported in this browser');return}if(activeRec){activeRec.stop();activeRec=null;if(activeBtn)activeBtn.classList.remove('active');activeBtn=null;return}const target=side==='D'?D:U,btn=side==='D'?'voiceD':'voiceU';const r=new SR();r.lang='hi-IN';r.continuous=true;r.interimResults=false;activeRec=r;activeBtn=$(btn);activeBtn.classList.add('active');r.onresult=e=>{let text='';for(let i=e.resultIndex;i<e.results.length;i++)if(e.results[i].isFinal)text+=e.results[i][0].transcript;if(text){const value=side==='D'?unicodeToLegacy(text):text;const a=target.selectionStart,b=target.selectionEnd;target.setRangeText(value,a,b,'end');update()}};r.onerror=()=>toast('Microphone unavailable');r.onend=()=>{if(activeBtn)activeBtn.classList.remove('active');activeRec=null;activeBtn=null};try{r.start()}catch(e){toast('Microphone could not start');activeRec=null;activeBtn.classList.remove('active');activeBtn=null}}
-$('voiceD').onclick=()=>voice('D');$('voiceU').onclick=()=>voice('U');
-try{const draft=JSON.parse(localStorage.getItem('svfcv3_draft')||'null');if(draft){D.value=draft.d||'';U.value=draft.u||''}}catch(e){}update();
-</script>
-<script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./service-worker.js').catch(() => {});
-  });
+const $=id=>document.getElementById(id),L=$('legacy'),U=$('unicode');
+/* Explicitly limited phrase-level sample rules. This is NOT a complete DevLys 010 map. */
+const pairs=[
+ ['vkids }kjk izLrqr','आपके द्वारा प्रस्तुत'],
+ ['r`rh; iwoZxzg.k','तृतीय पूर्वग्रहण'],
+ ['jkf\'k ds tek ds pkyku dh jkf\'k dk lR;kiu','राशि के जमा के चालान की राशि का सत्यापन'],
+ ['mDr jkf\'k dks fu;ekuqlkj le;ksftr dj iqu% la\'kksf/kr vkoaVu i= tkjh fd;k tk jgk gS','उक्त राशि को नियमानुसार समायोजित कर पुनः संशोधित आवंटन पत्र जारी किया जा रहा है'],
+ ['mDr la\'kksf/kr i= vkidks tYn gh izkIr gksxk','उक्त संशोधित पत्र आपको जल्द ही प्राप्त होगा'],
+ ['cdk;k ewy jkf\'k','बकाया मूल राशि'],
+ [''+'\'kkfLr e; th-,l-Vh- lghr','शास्ति मय जी-एस-टी- सहित'],
+ ['fnukad','दिनांक'],['dk;kZy;','कार्यालय'],['vfèk—','अधिकृत'],
+ ['cSad [kkrs','बैंक खाते'],['vfuok;Zr%','अनिवार्यतः'],
+ ['HkkSfrd dCtk','भौतिक कब्जा'],['vko';d izi=','आवश्यक प्रपत्र'],
+ ['lwpukFkZ izsf"kr gSA','सूचनार्थ प्रेषित है।']
+];
+function onePassReplace(input, rules) {
+  let out = input;
+  for (const [from,to] of [...rules].sort((a,b)=>b[0].length-a[0].length)) {
+    out = out.split(from).join('\u0000'+to+'\u0000');
+  }
+  return out.replace(/\u0000/g,'');
 }
+function toUnicode(s){return onePassReplace(s,pairs)}
+function toLegacy(s){return onePassReplace(s,pairs.map(([a,b])=>[b,a]))}
+$('toUnicode').onclick=()=>{U.value=toUnicode(L.value);U.focus()};
+$('toLegacy').onclick=()=>{L.value=toLegacy(U.value);L.focus()};
+$('copyLegacy').onclick=()=>navigator.clipboard?.writeText(L.value);
+$('copyUnicode').onclick=()=>navigator.clipboard?.writeText(U.value);
+$('clearLegacy').onclick=()=>L.value='';
+$('clearUnicode').onclick=()=>U.value='';
+$('reset').onclick=()=>{L.value='';U.value=''};
 </script>
 </body></html>

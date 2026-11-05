@@ -1,13 +1,9 @@
 {
-  "name": "SHREE VAISHNAVI COMPUTERS - FontConvert",
+  "name": "SHREE VAISHNAVI COMPUTERS FontConvert V2",
   "short_name": "SVC FontConvert",
-  "description": "DevLys 010 and Unicode Hindi font converter",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f5f6f7",
-  "theme_color": "#1749a5",
-  "icons": [
-    {"src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any"}
-  ]
+  "background_color": "#f4f6f8",
+  "theme_color": "#1749a5"
 }
